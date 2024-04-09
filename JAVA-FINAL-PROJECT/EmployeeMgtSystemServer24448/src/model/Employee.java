@@ -23,11 +23,11 @@ public class Employee implements Serializable{
     private String phoneNumber;
     private String salary;
     private String address;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name ="manager_id")
     private Manager manager;
     
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "dep_id")
     private Department department;
 

@@ -25,7 +25,7 @@ public class Chairman implements Serializable{
     @Column(name = "phone_number")
     private String phoneNumber;
     private String address;
-    @OneToMany(mappedBy = "chairman")
+    @OneToMany(mappedBy = "chairman", cascade = CascadeType.ALL)
     List <Manager> managers = new ArrayList<>();
 
     public Chairman() {

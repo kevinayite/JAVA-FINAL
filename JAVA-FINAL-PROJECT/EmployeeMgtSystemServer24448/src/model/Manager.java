@@ -30,7 +30,7 @@ public class Manager implements Serializable{
     @OneToOne(mappedBy = "manager")
     private Department department;
     
-    @OneToMany(mappedBy = "manager")
+    @OneToMany(mappedBy = "manager", cascade = CascadeType.ALL)
     List<Employee> employees = new ArrayList<>();
 
     public Manager() {

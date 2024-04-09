@@ -25,7 +25,7 @@ public class Department implements Serializable{
     private Manager manager;
     
     
-    @OneToMany(mappedBy = "department")
+    @OneToMany(mappedBy = "department", cascade = CascadeType.ALL)
     List<Employee> employees = new ArrayList<>();
 
     public Department() {
